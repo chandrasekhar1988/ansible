@@ -1,0 +1,11 @@
+# playbook is varible demo
+- name: variables from PLAY level
+  hosts: localhost
+  vars:
+    Course: "DevOps"
+    Trainer: "Chandra"
+    Duration: "100hrs"
+  tasks:
+    - name: check variables
+      ansible.builtin.debug:
+        msg: "Hi, Iam learning {{Course}},Trainer is {{Trainer}},Duration is {{Duration}}"
