@@ -1,0 +1,7 @@
+# argument level variables
+- name: variables from PLAY level
+  hosts: localhost
+  tasks:
+    - name: check variables
+      ansible.builtin.debug:
+        msg: "Hello {{PERSON}},Good {{WISHES}}!"
