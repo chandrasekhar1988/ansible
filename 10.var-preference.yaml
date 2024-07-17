@@ -11,9 +11,9 @@
   #     private: false #user can't see what they are entering
   vars_files:
     - variables.yaml
-  vars:
-    PERSON: "5.Chandra_Var from Play"
-    WISHES: "5.Morning_Var from Play"
+  # vars:
+  #   PERSON: "5.Chandra_Var from Play"
+  #   WISHES: "5.Morning_Var from Play"
   tasks:
     - name: check variables
       # vars:
