@@ -16,13 +16,13 @@
   tasks:
     - name: print key value pair
       ansible.builtin.debug:
-        msg: "name :{{KeyValueNAME}}"
+        msg: "KeyValue displayed as :{{KeyValueNAME}}"
     - name: print List
       ansible.builtin.debug:
-        msg: "skills :{{Listskills}}"
+        msg: "List displayed as :{{Listskills}}"
     - name: print map
       ansible.builtin.debug:
-        msg: "Experience :{{MapExperience}}"
+        msg: "Map displayed as :{{MapExperience}}"
     - name: print boolean
       ansible.builtin.debug:
-        msg: "Trainer :{{BooleanTrainer}}"
+        msg: "Boolean displayed as :{{BooleanTrainer}}"
