@@ -1,0 +1,20 @@
+- name: Install NGINX
+  hosts: localhost
+  become: yes
+  vars:
+  packages:
+    - name: nginx
+      required: True
+    - name: mysql
+      required: True
+    - name: apache
+      required: False
+  tasks:
+    - name: Install packages on Red Hat
+      yum:
+        name: "{{ item.name }}"
+        state: present
+      # Loop over the packages variable
+      loop: "{{ packages }}"
+      # Install only if required property is set to true
+      when: item.required == True

@@ -1,5 +1,3 @@
----
-# Playbook name
 - name: Install Softwares
 
 # Target hosts for the playbook
