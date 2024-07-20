@@ -1,7 +1,7 @@
-- name: Using Conditionalsone
-  hosts: localhost
+- name: Install Softwares # Playbook name
+  hosts: localhost # Target hosts for the playbook
   become: yes
-  vars:
+  vars: # Variables used in the playbook
     packages:
       - name: nginx
         required: True
@@ -9,8 +9,8 @@
         required: True
       - name: apache
         required: False
-  tasks:
-    - name: Install packages on Red Hat
+  tasks: # Tasks to be executed on the target hosts
+    - name: Install packages on RedHat # Task to install packages on redHat
       yum:
         name: "{{ item.name }}"
         state: present
