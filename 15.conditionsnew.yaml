@@ -2,13 +2,13 @@
   hosts: localhost
   become: yes
   vars:
-  packages:
-    - name: nginx
-      required: True
-    - name: mysql
-      required: True
-    - name: apache
-      required: False
+    packages:
+      - name: nginx
+        required: True
+      - name: mysql
+        required: True
+      - name: apache
+        required: False
   tasks:
     - name: Install packages on Red Hat
       yum:
