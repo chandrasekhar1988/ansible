@@ -1,4 +1,4 @@
-- name: Install NGINX
+- name: installing NGINX
   hosts: localhost
   become: yes
   vars:
