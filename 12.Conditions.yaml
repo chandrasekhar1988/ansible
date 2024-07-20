@@ -1,5 +1,5 @@
 - name: Using Conditionals
-  hosts: webserver
+  hosts: localhost
   tasks:
     - name: Run a command
       command: "date +%H"
