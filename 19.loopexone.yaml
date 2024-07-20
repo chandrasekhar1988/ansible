@@ -11,3 +11,7 @@
         - { name: Eone, uid: 1010 }
         - { name: Fone, uid: 1011 }
         - { name: Gone, uid: 1012 }
+        - name: Hone
+          uid: 1013
+        - name: Ione
+          uid: 1014
