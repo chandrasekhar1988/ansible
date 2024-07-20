@@ -1,0 +1,32 @@
+---
+# This is a YAML file that defines an Ansible playbook
+- name: Example Playbook # Name of the playbook, for identification purposes
+  hosts: webserver # Target hosts or group of hosts where the tasks will be executed
+  become: true # Run tasks with elevated privileges (e.g. sudo)
+
+  # A list of tasks to be executed in order
+  tasks:
+    - name: Ensure Apache is installed # Name of the task, for identification purposes
+      yum: # Name of the module to use
+        name: httpd # Name of the package to install
+        state: present # Ensure the package is present
+
+    - name: Ensure Apache is running and enabled at boot # Name of task,for identification purposes
+      service: # Name of the module to use
+        name: httpd # Name of the service to manage
+        state: started # Ensure the service is running
+        enabled: true # Ensure the service starts at boot
+
+
+
+# Iterate or Visulize
+tasks:
+  - var: item= Apple
+    user: 'name= “{{ item }}” state=present'
+  - var: item= Banana
+    user: 'name= “{{ item }}” state=present'
+  - var: item= Carrot
+    user: 'name= “{{ item }}” state=present'
+
+
+

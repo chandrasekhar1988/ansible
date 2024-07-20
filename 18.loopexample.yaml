@@ -1,0 +1,14 @@
+---
+- name: Create users
+  hosts: localhost
+  become: true
+  tasks:
+    # Iterate or Visulize
+    - var: item= Apple
+      user: "name= “{{ item }}” state=present"
+    - var: item= Banana
+      user: "name= “{{ item }}” state=present"
+    - var: item= Carrot
+      user: "name= “{{ item }}” state=present"
+    - var: item= Donut
+      user: "name= “{{ item }}” state=present"
